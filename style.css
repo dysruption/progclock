@@ -1,12 +1,96 @@
+body{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+}
+
+input[type=text]{
+    /*border: 1px solid grey; Made grey border around text field */
+    /*border-radius: 3px;*/
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid grey;
+    /*border-right: 1px solid grey;*/
+    /*width: 200px;*/
+    height: 20px;
+    width: 50px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    background: white;
+    text-align: center;
+}
+
+input[type=text]:hover{
+	background: #f7f7f7;
+}
+
+input[type=text]:focus{
+	background: #f7f7f7;
+	outline: none;
+
+}
+
+input[type=button]{
+	height: 24px;
+	width: auto;
+	text-align: center;
+
+	background: grey;
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+input[type=button]:hover{
+	background: white;
+	color: grey;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+
+form {
+	margin: 0px;
+}
+
+#timer {
+	margin-top: -10px;
+	margin-botton: 50px;
+	font-size: 5em;
+}
+
+.bracket{
+	font-size: 30px;
+	color: grey;
+}
+
+.done{
+	font-size: 90px;
+}
+
 #progress {
+	margin-left: auto;
+	margin-right:auto;
+	width:80%;
 	padding:10px;
-	height:75px;
+	height:40px;
 	border: 1px solid #cccccc;
+}
 
 #bar {
 	width:1px;
-	height:60px;
+	height:41px;
 	background-color:#999999;
 	
+}
+#foot {
+	font-size:8px;
+	text-align:center;
+	bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    margin-bottom:10px;
 	
 }

@@ -1,11 +1,18 @@
-
 <?php
+	
+	header("Content-Type", "application/json");
+	
+	$data = $_POST['time'];
+/* 	print_r($_POST); */
 	$db = mysql_connect("localhost", "jameslar", "mylifeforaiuR14!");
 	mysql_select_db("popcorn", $db);
-	$time = 30;
-	$result = mysql_query("SELECT * FROM corn WHERE time = ". $time ." ORDER BY RAND() LIMIT 1;", $db);
+	$result = mysql_query("SELECT * FROM corn WHERE time = ". $data ." ORDER BY RAND() LIMIT 1;", $db);
 	
-	while($row = mysql_fetch_array($result) or die(mysql_error())){
-		echo $row['phrase'];
-	};
-?>
+	$row = mysql_fetch_array($result);
+	
+	$result = array(
+		"item" => $row['phrase'],
+	);
+	
+	echo json_encode($result);
+
