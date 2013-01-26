@@ -1,0 +1,12 @@
+#progress {
+	padding:10px;
+	height:75px;
+	border: 1px solid #cccccc;
+
+#bar {
+	width:1px;
+	height:60px;
+	background-color:#999999;
+	
+	
+}
