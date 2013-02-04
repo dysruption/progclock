@@ -24,9 +24,9 @@
 	</nav>
 
 	<form id="myform" NAME="myform" METHOD="GET" autocomplete="off">
-		<span class="bracket">[ </span>
+		<span class="bracket">[</span>
 		<input type="text" id="day" placeholder="day"> : <input type="text" id="hour" placeholder="hour"> : <input type="text" id="minute" placeholder="minute"> : <input type="text" id="second" placeholder="second">
-		<span class="bracket"> ]</span>
+		<span class="bracket">]</span>
 		<br>
 		<input id="button" type="button" name="button" value="Submit">
 	</form>
