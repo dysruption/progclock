@@ -18,7 +18,10 @@ function Tick(){
 
 	if (totalTime == 0){
 		// alert("Time's up yo.")
-		Timer.innerHTML = "<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/SIaFtAKnqBU?autoplay=1#t=3s\" frameborder=\"0\" allowfullscreen></iframe>";
+		$('#timer').html("<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/SIaFtAKnqBU?autoplay=1#t=3s\" frameborder=\"0\" allowfullscreen></iframe>").delay(5000).fadeOut().queue(function(n) {
+		        $(this).html("00:00:00:00");
+		        n();
+		    }).fadeIn();
 		return;
 	}
 
@@ -62,7 +65,8 @@ function Update(){
 	// var timeStr = days + ":" + hours + ":" + minutes + ":" + seconds;
 	$('#timer').html(timeStr);
 	//$.getJSON('phrase.php', time, function(data) { debuggging
-	$.post('phrase.php', {"time" : totalTime}, function(data) {
+	//alert(totalTime);
+	$.post('phrase.php?time='+totalTime, {"time" : totalTime}, function(data) {
 			console.log("before", data);
 			data = JSON.parse(data);
 /* 			console.log(data); */

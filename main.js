@@ -12,6 +12,10 @@ $(function(){
 		hour = parseInt(hour);
 		minute = parseInt(minute);
 		second = parseInt(second);
+		if (isNaN(day)){day=0;}
+		if (isNaN(hour)){hour=0;}
+		if (isNaN(minute)){minute=0};
+		if (isNaN(second)){second=0};
 		
 		//console.log(day, hour, minute, second);
 		//console.log(day*86400, hour*3600, minute*60, second);
@@ -21,10 +25,11 @@ $(function(){
 		var time = totalSeconds;
 		var progWidth = $('#progress').width();
 		$('#bar').animate({width:progWidth}, (time * 1000), 'linear', function(){
-			$('#bar').animate({opacity:0.1});
-			});
-		
-		makeTimer("timer",totalSeconds);
+			$('#bar').delay(1000).animate({width:1});
+		});
+		if(totalSeconds !== 0) {
+			makeTimer("timer",totalSeconds);
+		}
 		
 		
 			
@@ -32,6 +37,5 @@ $(function(){
 	});
 
 	
-
 
 });

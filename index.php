@@ -43,7 +43,7 @@
 	?>
 	
 
-<div id="foot"><a href="www.markmossberg.us">Mark Mossberg</a> &amp; <a href="www.jameslarisch.com">James Larisch</a></div>
+<div id="foot"><a href="http://www.markmossberg.us/">Mark Mossberg</a> &amp; <a href="http://www.jameslarisch.com/">James Larisch</a></div>
 
 </body>
 </html>
